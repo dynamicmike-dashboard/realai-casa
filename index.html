@@ -265,7 +265,143 @@
         </div>
     </header>
 
-<!-- ... skipping to pricing ... -->
+    <!-- PRESENTATION SLIDES (The "Why" - High Ticket Focus) -->
+    <section class="presentation-section" style="background: #0f172a; padding: 40px 0; position: relative;">
+        <div class="container" style="position: relative;">
+            <p class="fade-up" style="text-align: center; color: #94A3B8; font-size: 0.9rem; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                The Risk of the Open Market
+            </p>
+
+            <!-- Navigation Buttons -->
+            <button id="presSlideLeft" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 20; background: rgba(255, 255, 255, 0.9); color: #1e293b; border: 1px solid #cbd5e1; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="presSlideRight" class="pulse-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 20; background: #D4AF37; color: black; border: none; width: 60px; height: 60px; border-radius: 50%; cursor: pointer; transition: all 0.3s; box-shadow: 0 0 20px rgba(212,175,55,0.5); display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-arrow-right" style="font-size: 1.2rem;"></i>
+            </button>
+
+            <style>
+                @keyframes pulse-gold {
+                    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); transform: translateY(-50%) scale(1); }
+                    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); transform: translateY(-50%) scale(1.1); }
+                    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); transform: translateY(-50%) scale(1); }
+                }
+                .pulse-btn {
+                    animation: pulse-gold 2s infinite;
+                }
+                .pulse-btn:hover {
+                    animation: none;
+                    transform: translateY(-50%) scale(1.1) !important;
+                }
+            </style>
+
+            <!-- Carousel Container -->
+            <div id="presCarouselContainer" class="carousel-container" style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; display: flex; gap: 30px; scroll-behavior: smooth;">
+                
+                <!-- Same visuals as Elite, user requested "vistually the exact same" -->
+                <!-- Slide 1b -->
+                <img src="images/presentation%20Slide%201b%20The%20Reality%20of%20the%20Modern%20Agent.jpg" class="carousel-item shadow-2xl" style="display: inline-block; height: 500px; max-height: 70vh; width: auto; border-radius: 12px; scroll-snap-align: center; border: 1px solid #334155;">
+                
+                <!-- Slide 2 -->
+                <img src="images/presentation%20Slide%202%20The%20Time%20Waster%20Dilemma.jpg" class="carousel-item shadow-2xl" style="display: inline-block; height: 500px; max-height: 70vh; width: auto; border-radius: 12px; scroll-snap-align: center; border: 1px solid #334155;">
+
+                <!-- Slide 3 -->
+                <img src="images/presentation%20Slide%203%20The%20Repetitive%20Inquiry%20Trap.jpg" class="carousel-item shadow-2xl" style="display: inline-block; height: 500px; max-height: 70vh; width: auto; border-radius: 12px; scroll-snap-align: center; border: 1px solid #334155;">
+
+                <!-- Slide 4 -->
+                <img src="images/presentation%20Slide%204%20The%20Hyper-Local%20Knowledge%20Gap.jpg" class="carousel-item shadow-2xl" style="display: inline-block; height: 500px; max-height: 70vh; width: auto; border-radius: 12px; scroll-snap-align: center; border: 1px solid #334155;">
+
+                <!-- Slide 6b -->
+                <img src="images/presentation%20Slide%206b%20The%20Solution%20–%20Your%20PWA%20&%20Chatbot.jpg" class="carousel-item shadow-2xl" style="display: inline-block; height: 500px; max-height: 70vh; width: auto; border-radius: 12px; scroll-snap-align: center; border: 1px solid #334155;">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="fade-up" style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">Security-First Intelligence</h2>
+            
+            <div class="features-grid">
+                <div class="feature-box card-anim">
+                    <span class="f-icon">🔒</span>
+                    <h3>Identity Firewall</h3>
+                    <p style="color: var(--text-sub); margin-top: 10px;">Celebrity and HNW sellers demand privacy. EstateGuard refuses to release precise location or details until the lead is verified.</p>
+                </div>
+                <div class="feature-box card-anim">
+                    <span class="f-icon">🕵️</span>
+                    <h3>Smart Vetting</h3>
+                    <p style="color: var(--text-sub); margin-top: 10px;">Our AI analyzes inquiry patterns. If a user asks "suspicious" questions about security systems, they are flagged instantly.</p>
+                </div>
+                <div class="feature-box card-anim">
+                    <span class="f-icon">✨</span>
+                    <h3>The "Velvet Rope"</h3>
+                    <p style="color: var(--text-sub); margin-top: 10px;">Create an aura of exclusivity. Buyers must "apply" to view details, elevating the perceived value of your listing immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="dashboard-preview" style="position: relative;">
+        <div class="container" style="position: relative;">
+            
+            <button id="slideLeft" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.6); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="slideRight" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.6); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+             <div id="carouselContainer" class="carousel-container" style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; display: flex; gap: 20px; scroll-behavior: smooth;">
+                <!-- Slides (Same as Elite for visual consistency) -->
+                <img src="images/elite-slide-1.png" alt="Dashboard" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-2.png" alt="Command Center" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-3.png" alt="Portfolio Control" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-4.png" alt="Business Data" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-5.png" alt="Identity & Branding" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-6.png" alt="Slide 6" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-7.png" alt="Slide 7" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-8.png" alt="Slide 8" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+                <img src="images/elite-slide-9.png" alt="Slide 9" class="carousel-item shadow-2xl" style="display: inline-block; width: 85%; max-width: 1000px; border-radius: 12px; scroll-snap-align: center; border: 4px solid #334155;">
+            </div>
+            <p style="text-align: center; color: #94A3B8; font-size: 0.9rem; margin-top: 10px;">
+                <i class="fas fa-hand-pointer"></i> Swipe to explore the Command Center
+            </p>
+        </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="fade-up" style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 60px; color: var(--primary);">Secure Your Listing in 3 Steps</h2>
+            
+            <div class="step-row slide-in">
+                <div class="step-circle">1</div>
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Build the Vault</h3>
+                    <p style="color: var(--text-sub);">Maintain discretion. Upload your private property documents, floor plans, and security details into the encrypted "Dark Vault."</p>
+                </div>
+            </div>
+            
+            <div class="step-row slide-in">
+                <div class="step-circle">2</div>
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">The Security Concierge</h3>
+                    <p style="color: var(--text-sub);">Our AI acts as your 24/7 gatekeeper. It politely deflects casual looky-loos while providing high-value teasers to verified buyers.</p>
+                </div>
+            </div>
+
+            <div class="step-row slide-in">
+                <div class="step-circle">3</div>
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Identity Verification</h3>
+                    <p style="color: var(--text-sub);">The moment a lead is qualified, you receive a Dossier Alert. Review their chat history and intent profile before you ever pick up the phone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- PRICING (5X Pricing) -->
     <section class="pricing-section">
@@ -288,7 +424,26 @@
                     
                     <!-- 5x of $149 = $745 -->
                     <span class="price-sub">Then $745/mo (Locked In For Life)</span>
-<!-- ... -->
+
+                    <p style="font-size: 0.9rem; color: #CBD5E1; max-width: 400px; margin: 0 auto; line-height: 1.4; min-height: 2.5em;">
+                        Designed for Luxury Brokerages and High-Volume Teams requiring maximum security and privacy.
+                    </p>
+
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> <b>Encrypted "Dark Vault"</b></li>
+                        <li><i class="fas fa-check"></i> Identity Verification AI</li>
+                        <li><i class="fas fa-check"></i> Up to 150 Document Sources</li>
+                        <li><i class="fas fa-check"></i> Strict Vetting Logic</li>
+                        <li><i class="fas fa-check"></i> 24/7 Threat Monitoring</li>
+                    </ul>
+
+                    <!-- Placeholder link -->
+                    <a href="https://buy.stripe.com/6oEfZdaxtfx3fQcdRU" class="cta-btn" style="text-decoration: none; display: inline-block;">
+                        🛡️ Apply for Access →
+                    </a>
+                    <p style="margin-top: 20px; font-size: 0.85rem; color: #64748B;">Strictly Limited Availability</p>
+                </div>
+
                 <!-- Card 2: Global License (5x of Lifetime) -->
                 <div class="pricing-card scale-up" style="border: 2px solid #D4AF37; background: linear-gradient(145deg, #020617 0%, #1e293b 100%); position: relative; overflow: hidden;">
                     
@@ -317,7 +472,7 @@
                         <li><i class="fas fa-star" style="color: #D4AF37;"></i> API Access</li>
                     </ul>
 
-                    <a href="#" class="cta-btn" style="background: #D4AF37; color: black; border: none; text-decoration: none; display: inline-block;">
+                    <a href="https://buy.stripe.com/14kdR51in8xNdEp6oN" class="cta-btn" style="background: #D4AF37; color: black; border: none; text-decoration: none; display: inline-block;">
                         🔑 Secure Global License →
                     </a>
                     <p style="margin-top: 20px; font-size: 0.85rem; color: #fbbf24;">Invitation Only</p>
