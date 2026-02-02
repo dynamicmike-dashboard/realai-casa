@@ -45,15 +45,30 @@
             <div class="w-20 h-20 bg-emerald-500/20 border border-emerald-500/50 rounded-full flex items-center justify-center mx-auto mb-6 gold-glow animate-bounce">
                 <i class="fas fa-check text-3xl text-emerald-400"></i>
             </div>
-            <h1 class="text-4xl font-luxury font-bold mb-2">Payment Successful</h1>
-            <p class="text-slate-400">Your "Jumpstart" spot is secured.</p>
+            <h1 class="text-4xl font-luxury font-bold mb-2">Access Granted</h1>
+            <p class="text-slate-400">Welcome to the EstateGuard Elite.</p>
+        </div>
+
+        <!-- Quick Start Instructions -->
+        <div class="bg-slate-900/50 border border-white/10 rounded-2xl p-6 mb-8 text-left">
+            <h3 class="text-[#D4AF37] font-bold uppercase tracking-widest text-sm mb-4">Quick Start Guide</h3>
+            <ul class="space-y-3 text-slate-300 text-sm">
+                <li class="flex items-start gap-3">
+                    <span class="bg-white/10 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+                    <span>Check your email for your payment receipt and license key.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-white/10 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+                    <span>Create your admin account below to unlock the dashboard.</span>
+                </li>
+            </ul>
         </div>
 
         <!-- Setup Form -->
         <div class="glass-panel p-8 md:p-10 rounded-[2rem]">
             <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
                 <i class="fas fa-user-shield text-[#D4AF37]"></i>
-                Create Your Agent Account
+                Initialize Your Vault
             </h2>
 
             <form id="setupForm" class="space-y-5">
@@ -85,6 +100,12 @@
             </form>
             
             <p id="errorMsg" class="mt-4 text-red-400 text-sm text-center hidden"></p>
+        </div>
+
+        <div class="text-center mt-6">
+            <a href="https://realai-estateguard.vercel.app/" class="text-slate-400 hover:text-white text-sm transition-colors border-b border-transparent hover:border-white pb-1">
+                Already have an account? <b>Login to Dashboard</b>
+            </a>
         </div>
 
         <p class="text-center mt-8 text-slate-500 text-sm">
