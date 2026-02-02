@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to RealAi Elite | Setup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0F172A;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+        .font-luxury { font-family: 'Playfair Display', serif; }
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .gold-glow {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center relative p-6">
+
+    <!-- Ambient Background -->
+    <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#D4AF37] opacity-10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-blue-900 opacity-10 rounded-full blur-[120px]"></div>
+
+    <div class="w-full max-w-lg relative z-10">
+        
+        <!-- Success Animation -->
+        <div class="text-center mb-8">
+            <div class="w-20 h-20 bg-emerald-500/20 border border-emerald-500/50 rounded-full flex items-center justify-center mx-auto mb-6 gold-glow animate-bounce">
+                <i class="fas fa-check text-3xl text-emerald-400"></i>
+            </div>
+            <h1 class="text-4xl font-luxury font-bold mb-2">Payment Successful</h1>
+            <p class="text-slate-400">Your "Jumpstart" spot is secured.</p>
+        </div>
+
+        <!-- Setup Form -->
+        <div class="glass-panel p-8 md:p-10 rounded-[2rem]">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
+                <i class="fas fa-user-shield text-[#D4AF37]"></i>
+                Create Your Agent Account
+            </h2>
+
+            <form id="setupForm" class="space-y-5">
+                <div>
+                    <label class="block text-xs font-bold text-[#D4AF37] uppercase tracking-widest mb-2 pl-1">Agency Name</label>
+                    <input type="text" id="businessName" required 
+                        class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors"
+                        placeholder="e.g. Prestige Estates">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[#D4AF37] uppercase tracking-widest mb-2 pl-1">Email Address</label>
+                    <input type="email" id="email" required 
+                        class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors"
+                        placeholder="agent@example.com">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[#D4AF37] uppercase tracking-widest mb-2 pl-1">Create Password</label>
+                    <input type="password" id="password" required minlength="6"
+                        class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors"
+                        placeholder="••••••••">
+                </div>
+
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-[#D4AF37] text-slate-900 font-bold py-4 rounded-xl mt-4 hover:bg-yellow-500 transition-all shadow-lg active:scale-95 uppercase tracking-widest text-sm">
+                    Finish & Access Dashboard <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </form>
+            
+            <p id="errorMsg" class="mt-4 text-red-400 text-sm text-center hidden"></p>
+        </div>
+
+        <p class="text-center mt-8 text-slate-500 text-sm">
+            <i class="fas fa-lock mr-2"></i> 256-bit Secure Encryption
+        </p>
+    </div>
+
+    <script>
+        // CLIENT-SIDE SUPABASE CONFIG (Matching your App.tsx)
+        const SUPABASE_URL = "https://your-project.supabase.co"; // REPLACE WITH YOUR REAL URL
+        const SUPABASE_ANON_KEY = "your-anon-key"; // REPLACE WITH YOUR REAL KEY
+        // Ideally, these should be injected or fetched, but for a static HTML file, 
+        // we might need them hardcoded OR we tell the user to update them.
+        // CHECKPOINT: I will define them as placeholders and ask the user to verify,
+        // OR I can try to read them from a .env file if I was building, but this is static HTML.
+        // I will use a placeholder and add a comment.
+    </script>
+
+    <!-- We need the actual config. I'll read the .env.local file from the project to fill this in accurately -->
+    <script type="module">
+        import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+
+        // FETCH CONFIG FROM URL PARAMS OR HARDCODE (For now, I'll attempt to use the ones from the main app if known, 
+        // but better to fetch from a verified source. I will assume standard env vars for now)
+        
+        // AUTO-DETECT: For now, I'll write the logic, but the connection needs real keys.
+        // User, please replace these with your actual Vercel env vars or Supabase project keys.
+        const supabaseUrl = 'https://qrydrfgrwzjewkjennli.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFyeWRyZmdyd3pqZXdramVubmxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0NDI2NzksImV4cCI6MjA4NTAxODY3OX0.Ev6Kb_j3ACiKcCPut0WgvuJJA7kwSppC4i4jx0GxuIA';
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        const form = document.getElementById('setupForm');
+        const btn = document.getElementById('submitBtn');
+        const errorMsg = document.getElementById('errorMsg');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Setting up...';
+            errorMsg.classList.add('hidden');
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const businessName = document.getElementById('businessName').value;
+
+            try {
+                const { data, error } = await supabase.auth.signUp({
+                    email: email,
+                    password: password,
+                    options: {
+                        data: {
+                            business_name: businessName,
+                            subscription_status: 'active' // <--- THE MAGIC KEY
+                        }
+                    }
+                });
+
+                if (error) throw error;
+
+                // Success! Redirect to PWA
+                // Using the URL provided by user
+                window.location.href = "https://realai-estateguard.vercel.app/";
+
+            } catch (err) {
+                console.error(err);
+                btn.disabled = false;
+                btn.innerHTML = 'Finish & Access Dashboard <i class="fas fa-arrow-right ml-2"></i>';
+                errorMsg.textContent = err.message;
+                errorMsg.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
